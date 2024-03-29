@@ -68,7 +68,7 @@ function Folder({
                 onKeyDown={onRename}
                 onBlur={() => setRenameInput(false)}
                 className='inputContainer__input'
-                value={explorer.name}
+                defaultValue={explorer.name}
                 autoFocus
               ></input>
             )}
@@ -123,7 +123,7 @@ function Folder({
               onKeyDown={onRename}
               onBlur={() => setRenameInput(false)}
               className='inputContainer__input'
-              value={explorer.name}
+              defaultValue={explorer.name}
               autoFocus
             ></input>
           )}
