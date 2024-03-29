@@ -68,6 +68,7 @@ function Folder({
                 onKeyDown={onRename}
                 onBlur={() => setRenameInput(false)}
                 className='inputContainer__input'
+                value={explorer.name}
                 autoFocus
               ></input>
             )}
@@ -113,9 +114,19 @@ function Folder({
   } else if (explorer.id) {
     return (
       <div className='file'>
-        <div>
+        <div className={renameInput ? 'inputContainer' : ''}>
           <span>📄</span>
           {!renameInput && <span>{explorer.name}</span>}
+          {renameInput && (
+            <input
+              type='text'
+              onKeyDown={onRename}
+              onBlur={() => setRenameInput(false)}
+              className='inputContainer__input'
+              value={explorer.name}
+              autoFocus
+            ></input>
+          )}
         </div>
         {!renameInput && (
           <div>
